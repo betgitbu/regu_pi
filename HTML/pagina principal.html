@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidos Contra el Cáncer</title>
+  <link rel="stylesheet" href="/CSS/pagina principal.css" />
+</head>
+
+<script>
+  function moverCarrusel(direccion) {
+    const carrusel = document.getElementById("carrusel");
+    const tarjeta = carrusel.querySelector(".card");
+    const scrollCantidad = tarjeta.offsetWidth + 20; // incluye el espacio entre tarjetas
+
+    carrusel.scrollBy({
+      left: direccion * scrollCantidad,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo">Unidos Contra el Cáncer</div>
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+     <li><a href="#cerrar-sesion">cerrar sesión</a></li>
+    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+    <li><a href="/HTML/login.html">Iniciar Sesión</a></li>
+  </ul>
+</nav>
+
+  <header> 
+
+    <h1>💖 Unidos Contra el Cáncer 💖</h1>
+  </header>
+  <section id="sobre-nosotros">
+  <!-- Aquí puedes poner información institucional -->
+
+
+<div class="carrusel-container">
+  <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
+
+  <main class="carrusel" id="carrusel">
+    <section class="card" id="mama">
+      <h2>🎗 Cáncer de mama</h2>
+      <p>El cáncer de mama afecta principalmente a mujeres, pero también puede presentarse en hombres. La detección temprana mejora significativamente las probabilidades de curación.</p>
+    </section>
+
+    <section class="card" id="prostata">
+      <h2>🎗 Cáncer de próstata</h2>
+      <p>El cáncer de próstata es uno de los más comunes entre los hombres. La revisión periódica es clave para detectarlo a tiempo.</p>
+    </section>
+
+   <section class="card" id="piel">
+  <h2>🎗 Cáncer de piel</h2>
+  <img src="imagenes/imagen-paciente cancer.jpg" alt="Prevención del cáncer de piel" width="300">
+ 
+</section>
+
+    <section class="card" id="pulmon">
+      <h2>🎗 Cáncer de pulmón</h2>
+      <p>El tabaquismo es la principal causa de cáncer de pulmón. Evitar el cigarro y ambientes contaminados reduce el riesgo.</p>
+    </section>
+
+    <section class="card" id="leucemia">
+      <h2>🎗 Leucemia</h2>
+      <p>La leucemia afecta la sangre y la médula ósea. Puede presentarse en niños y adultos, y requiere tratamiento especializado.</p>
+    </section>
+  </main>
+
+  <button class="carrusel-btn next" onclick="moverCarrusel(1)">&#10095;</button>
+</div>
+<!-- Pie de página HTML -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>concepto</h2>
+      <p>Todos los derechos reservados.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#">Equipo editorial</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Contáctanos</a>
+    </div>
+  </div>
+  <hr>
+  <p class="creditos">Una publicación de <strong>Editorial Etecé</strong></p>
+</footer>
